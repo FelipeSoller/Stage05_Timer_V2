@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --app-bg-color: #FFFFFF;
+  --app-txt-color: #323238;
+  --timer-btn-color: #323238;
+  --sounds-btn-bg-off: #E1E1E6;
+  --sounds-btn-bg-on: #02799D;
+  --sounds-btn-text-off: ##323238;
+  --sounds-btn-text-on: #FFFFFF;
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+span {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--app-bg-color);
+  color: var(--app-txt-color);
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 190px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  justify-self: center;
+}
+
+#timer {
+  font-size: 12.6rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#controls {
+  margin-top: 1.6rem;
+  gap: 4rem;
+}
+
+#controls button {
+  background-color: transparent;
+  border: 0;
+  color: var(--timer-btn-color);
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+#sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#sounds button {
+  background: var(--sounds-btn-bg-off);
+  color: var(--sounds-btn-text-off);
+  font-size: 6rem;
+  border-radius: 24px;
+  width: 13.8rem;
+  height: 15.2rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.playing {
+  background: var(--sounds-btn-bg-on);
+  color: var(--sounds-btn-text-on);
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
