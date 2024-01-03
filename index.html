@@ -18,12 +18,6 @@
 <body>
   <div class="app">
     <div class="timer">
-      <!-- <button id="toggle-mode">
-        <span class="sr-only">ativar light mode</span>
-        <i class="ph-bold ph-sun"></i>
-        <i class="ph-bold ph-moon"></i>
-      </button> -->
-
       <section id="timer" class="flex">
         <span id="minutes">00</span>
         <span>:</span>
@@ -58,29 +52,33 @@
         </button>
       </section>
     </div>
-    <div class="sounds">
-      <section id="sounds">
+    <div>
+      <section class="sounds" id="sounds">
         <button
-          data-action="forest"
-          class="ph-bold ph-tree playing"
+          data-type="selectSound"
+          data-action="forestMusic"
+          class="ph-bold ph-tree music-selector forestMusic"
         >
           <span class="sr-only">Som ambiente de floresta</span>
         </button>
         <button
-          data-action="rain"
-          class="ph-bold ph-cloud-rain"
+          data-type="selectSound"
+          data-action="rainMusic"
+          class="ph-bold ph-cloud-rain music-selector rainMusic"
         >
           <span class="sr-only">Som ambiente de chuva</span>
         </button>
         <button
-          data-action="coffeeShop"
-          class="ph-bold ph-storefront"
+          data-type="selectSound"
+          data-action="coffeeShopMusic"
+          class="ph-bold ph-storefront music-selector coffeeShopMusic"
         >
           <span class="sr-only">Som ambiente de loja de ca</span>
         </button>
         <button
-          data-action="fireplace"
-          class="ph-bold ph-campfire"
+          data-type="selectSound"
+          data-action="fireplaceMusic"
+          class="ph-bold ph-campfire music-selector fireplaceMusic"
         >
           <span class="sr-only">Adicionar 5 minutos</span>
         </button>
